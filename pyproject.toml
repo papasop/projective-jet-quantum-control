@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lgr-experiment"
+name = "symmetric-loss-filtration"
 version = "0.1.0"
-description = "Landau-Ginzburg-Reynolds reasoning trace experiments"
+description = "Symmetric-loss filtration and LGR reasoning trace experiments"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -22,6 +22,7 @@ openai = [
 ]
 
 [project.scripts]
+slf-experiment = "lgr_experiment.cli:main"
 lgr-experiment = "lgr_experiment.cli:main"
 
 [tool.setuptools.packages.find]
