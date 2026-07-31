@@ -8,11 +8,14 @@ Reference implementation scaffold and deterministic audit suite for
 **symmetric-loss filtration, projective-jet degeneracy, and response-fibre
 descent**.
 
-This repository packages the first reproducible experiment layer as importable
-Python modules. The current codebase focuses on Landau-Ginzburg-Reynolds (LGR)
-trace functionals for reasoning trajectories, while the project name and
-theoretical README establish the broader projective-jet filtration architecture
-for the next implementation stages.
+This repository contains two implementation layers:
+
+1. the earlier Landau-Ginzburg-Reynolds (LGR) reasoning-trajectory experiment
+   package; and
+2. the v1.3.1 quantum-control projective-jet and response-fibre audit.
+
+The repository package version is `0.1.0`. The response-fibre audit protocol
+version is `1.3.1`.
 
 ---
 
@@ -48,9 +51,9 @@ The intended framework has three layers:
 | `k=2` | `r=3` | `Z_1, Z_2, Z_3` | `L_2, L_4` | `L_6` | `~6` |
 | `k=3` | `r=5` | `Z_1, ..., Z_5` | `L_2, L_4, L_6` | `L_8` | `~8` |
 
-## Current Implementation
+## Implementation Layers
 
-The repository currently includes a deterministic LGR experiment package:
+The LGR layer includes a deterministic experiment package:
 
 - gzip-based complexity proxy `K(x)`
 - instance order parameters `phi(x)`, `lambda_K`, and `h(x)`
@@ -60,9 +63,9 @@ The repository currently includes a deterministic LGR experiment package:
 - a CLI with deterministic mock runs and optional OpenAI-backed runs
 - unit tests that do not require network access
 
-This is the first audit-friendly layer. The projective-chart engine,
-Hamiltonian driven-qubit realization, and response-fibre descent solver are the
-next implementation milestones.
+The v1.3.1 response-fibre audit implements the phase-invariant projective
+response, driven-qubit realization, parameter-dependent Krawczyk continuation,
+and exact-root sixth-order descent certification.
 
 ## Installation
 
@@ -138,6 +141,10 @@ Expected local status for the current implementation:
 This repository now includes the validated response-fibre exact-root descent
 audit package under `scripts/standalone`, `docs`, and `results`.
 
+The LGR package supports Python `>=3.9`. The response-fibre v1.3.1 audit
+requires Python `>=3.10` because the standalone script uses Python 3.10 type
+syntax. The recorded reference execution used Python `3.12.13`.
+
 At 192-bit Arb precision, the v1.3.1 run certifies:
 
 | Gate | Result |
@@ -153,7 +160,24 @@ The aggregate status remains
 window statement closes for only 2/10 endpoint steps. The endpoint-to-endpoint
 sixth-order descent gate passes for all ten declared steps.
 
-Compile the standalone audit:
+The archived files currently constitute a validated run record with a recorded
+certificate hash. They do not yet constitute a complete publicly archived proof
+certificate because `results/response_fibre_v1_3_1/certificate.json` was not
+supplied with the run log.
+
+Install the response-fibre dependencies:
+
+```bash
+python -m pip install -r requirements-response-fibre.txt
+```
+
+Run the full standalone audit:
+
+```bash
+python scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py
+```
+
+Compile the standalone audit without running the full calculation:
 
 ```bash
 python -m py_compile scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py
@@ -168,13 +192,27 @@ shasum -a 256 -c SHA256SUMS.txt
 See `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
 `results/response_fibre_v1_3_1/report.json` for the compact final report.
 
+## Completed in v1.3.1
+
+- Added phase-invariant projective response coordinates through
+  `a_0, ..., a_3`.
+- Added the driven-qubit response map and exact Arb construction.
+- Added parameter-dependent Krawczyk continuation over 640 boxes.
+- Added shared-endpoint continuation across ten local curve segments.
+- Added exact-root endpoint certification for eleven endpoint boxes.
+- Added strict endpoint-to-endpoint sixth-order descent certification.
+- Published deterministic protocol, parameterization, and certificate hashes.
+
 ## Roadmap
 
-- Add phase-invariant projective chart coordinates.
 - Add symbolic symmetric-loss filtration checks for `k=1..3`.
-- Add driven-qubit response maps and tensor audit fixtures.
-- Add response-fibre tangent projection and descent experiments.
-- Publish deterministic protocol digests for paper-level reproducibility.
+- Archive the original
+  `results/response_fibre_v1_3_1/certificate.json` matching the recorded
+  `certificate_sha256`.
+- Extend the finite-error descent audit beyond the current 2/10 certified
+  endpoint steps.
+- Add response-fibre tangent projection experiments beyond the certified
+  endpoint chain.
 
 ## Citation
 
