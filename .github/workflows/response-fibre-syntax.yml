@@ -1,0 +1,22 @@
+name: response-fibre syntax
+
+on:
+  push:
+    paths:
+      - "scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py"
+      - ".github/workflows/response-fibre-syntax.yml"
+  pull_request:
+    paths:
+      - "scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py"
+      - ".github/workflows/response-fibre-syntax.yml"
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile standalone audit
+        run: python -m py_compile scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py

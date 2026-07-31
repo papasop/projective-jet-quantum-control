@@ -133,6 +133,41 @@ Expected local status for the current implementation:
 | Mock 30-task experiment | `slf-experiment --provider mock` | Passing after editable install |
 | OpenAI run | `slf-experiment --provider openai` | Requires `OPENAI_API_KEY` |
 
+## Response-Fibre Audit v1.3.1
+
+This repository now includes the validated response-fibre exact-root descent
+audit package under `scripts/standalone`, `docs`, and `results`.
+
+At 192-bit Arb precision, the v1.3.1 run certifies:
+
+| Gate | Result |
+| --- | ---: |
+| Parameter-dependent Krawczyk boxes | 640/640 |
+| Shared chart endpoints | 9/9 |
+| Exact endpoint root boxes | 11/11 |
+| Consecutive endpoint steps with strict `L_6` descent | 10/10 |
+| Consecutive endpoint steps certified over the common finite-error window | 2/10 |
+
+The aggregate status remains
+`EXACT_ROOT_STEPWISE_DESCENT_INCONCLUSIVE` because the stronger finite-error
+window statement closes for only 2/10 endpoint steps. The endpoint-to-endpoint
+sixth-order descent gate passes for all ten declared steps.
+
+Compile the standalone audit:
+
+```bash
+python -m py_compile scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py
+```
+
+Verify the frozen artifact checksums:
+
+```bash
+shasum -a 256 -c SHA256SUMS.txt
+```
+
+See `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
+`results/response_fibre_v1_3_1/report.json` for the compact final report.
+
 ## Roadmap
 
 - Add phase-invariant projective chart coordinates.

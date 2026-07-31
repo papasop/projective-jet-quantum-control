@@ -1,0 +1,800 @@
+[notice] ignored notebook arguments: ['-f', '/root/.local/share/jupyter/runtime/kernel-5a799cb6-0889-4cb0-a6fd-e91bad69dbc2.json']
+
+========================================================================================================================
+RESPONSE-FIBRE EXACT-ROOT STEPWISE DESCENT AUDIT v1.3.1
+========================================================================================================================
+No PASQAL account, password, token, API key, or project ID is used.
+{
+  "title": "RESPONSE-FIBRE EXACT-ROOT STEPWISE DESCENT AUDIT",
+  "version": "1.3.1",
+  "formal_interval_arithmetic": true,
+  "arb_precision_bits": 192,
+  "model": "14-segment driven qubit with common quasi-static detuning",
+  "response_map": "real/imaginary parts of exact projective coefficients a0..a3",
+  "control_dimension": 14,
+  "response_dimension": 8,
+  "declared_segments": 10,
+  "subdivisions_per_segment": 64,
+  "declared_parameter_boxes": 640,
+  "global_transverse_gauge": true,
+  "chebyshev_degree": 6,
+  "fit_points": 11,
+  "cauchy_points": 64,
+  "cauchy_arcs": 64,
+  "jet_order": 50,
+  "sample_radius": 0.01,
+  "bound_radius": 0.02,
+  "root_radius_schedule": [
+    1e-10,
+    3e-10,
+    1e-09
+  ],
+  "endpoint_radius": 3e-10,
+  "loss_jet_order": 30,
+  "loss_sample_radius": 0.2,
+  "loss_bound_radius": 0.4,
+  "finite_error_window": [
+    0.035,
+    0.13
+  ],
+  "finite_error_bins": 48,
+  "descent_claim": "strict endpoint-to-endpoint descent for all ten declared curve segments; not pointwise monotonicity in the curve parameter",
+  "analytic_degeneracy_used_in_loss_difference": "exact equality of projective response coefficients a0..a3 sets symmetric-loss difference orders 0..5 identically to zero",
+  "exact_target_basis_construction": "the target is the normalized nominal reference state and its orthogonal complement is constructed algebraically; all pulse trigonometry uses outward-rounded Arb values of the declared decimal segment duration",
+  "finite_error_partition": "exact Arb decimal endpoints with contiguous rational subdivision",
+  "krawczyk_preconditioner": "NumPy midpoint inverse frozen as an exact Arb point matrix; all theorem-bearing products and inclusions are outward-rounded Arb",
+  "formal_krawczyk_linear_algebra": true,
+  "source_preflight_sha256": "e8b5d94d9684b921f17867c4d91fb2e32f208a87fac55035c6fc5228f75c072a",
+  "model_solver_source": "external companion module",
+  "finite_error_outcomes_used_to_construct_curve": false,
+  "L6_used_to_construct_curve": false,
+  "uses_pasqal_credentials": false,
+  "uses_cloud_or_qpu": false,
+  "quick_mode": false
+}
+protocol_sha256 = d7dfc6f06cc5b0b84f0ad092ae95aa980a443fea844f4d13ad70bad82246719c
+
+========================================================================================================================
+STAGE 0 - RECONSTRUCT AND FREEZE ONE GLOBAL TRANSVERSE GAUGE
+========================================================================================================================
+[freeze 01/10] global chart fitted
+[freeze 02/10] global chart fitted
+[freeze 03/10] global chart fitted
+[freeze 04/10] global chart fitted
+[freeze 05/10] global chart fitted
+[freeze 06/10] global chart fitted
+[freeze 07/10] global chart fitted
+[freeze 08/10] global chart fitted
+[freeze 09/10] global chart fitted
+[freeze 10/10] global chart fitted
+global_parameterization_sha256 = e8ad8a6fbcab626b726082b570f59df6854d4a28259177783e1f5e3274b1cb84
+
+========================================================================================================================
+STAGE 1 - PARAMETER-DEPENDENT ARB KRAWCZYK CHAIN
+========================================================================================================================
+[box 0001/640] pass=True ratio=0.1504 defect=0.1165
+[box 0002/640] pass=True ratio=0.1386 defect=0.1164
+[box 0003/640] pass=True ratio=0.1300 defect=0.1163
+[box 0004/640] pass=True ratio=0.1304 defect=0.1162
+[box 0005/640] pass=True ratio=0.1348 defect=0.1161
+[box 0006/640] pass=True ratio=0.1367 defect=0.1160
+[box 0007/640] pass=True ratio=0.1369 defect=0.1159
+[box 0008/640] pass=True ratio=0.1362 defect=0.1158
+[box 0009/640] pass=True ratio=0.1346 defect=0.1157
+[box 0010/640] pass=True ratio=0.1324 defect=0.1156
+[box 0011/640] pass=True ratio=0.1301 defect=0.1155
+[box 0012/640] pass=True ratio=0.1279 defect=0.1154
+[box 0013/640] pass=True ratio=0.1279 defect=0.1153
+[box 0014/640] pass=True ratio=0.1300 defect=0.1152
+[box 0015/640] pass=True ratio=0.1318 defect=0.1151
+[box 0016/640] pass=True ratio=0.1333 defect=0.1149
+[box 0017/640] pass=True ratio=0.1345 defect=0.1148
+[box 0018/640] pass=True ratio=0.1353 defect=0.1147
+[box 0019/640] pass=True ratio=0.1359 defect=0.1146
+[box 0020/640] pass=True ratio=0.1361 defect=0.1145
+[box 0021/640] pass=True ratio=0.1360 defect=0.1144
+[box 0022/640] pass=True ratio=0.1355 defect=0.1143
+[box 0023/640] pass=True ratio=0.1347 defect=0.1142
+[box 0024/640] pass=True ratio=0.1337 defect=0.1141
+[box 0025/640] pass=True ratio=0.1324 defect=0.1140
+[box 0026/640] pass=True ratio=0.1323 defect=0.1139
+[box 0027/640] pass=True ratio=0.1332 defect=0.1138
+[box 0028/640] pass=True ratio=0.1339 defect=0.1137
+[box 0029/640] pass=True ratio=0.1343 defect=0.1136
+[box 0030/640] pass=True ratio=0.1343 defect=0.1135
+[box 0031/640] pass=True ratio=0.1340 defect=0.1134
+[box 0032/640] pass=True ratio=0.1333 defect=0.1133
+[box 0033/640] pass=True ratio=0.1323 defect=0.1133
+[box 0034/640] pass=True ratio=0.1311 defect=0.1132
+[box 0035/640] pass=True ratio=0.1296 defect=0.1131
+[box 0036/640] pass=True ratio=0.1279 defect=0.1130
+[box 0037/640] pass=True ratio=0.1259 defect=0.1129
+[box 0038/640] pass=True ratio=0.1239 defect=0.1128
+[box 0039/640] pass=True ratio=0.1217 defect=0.1127
+[box 0040/640] pass=True ratio=0.1202 defect=0.1126
+[box 0041/640] pass=True ratio=0.1204 defect=0.1125
+[box 0042/640] pass=True ratio=0.1208 defect=0.1124
+[box 0043/640] pass=True ratio=0.1212 defect=0.1124
+[box 0044/640] pass=True ratio=0.1216 defect=0.1123
+[box 0045/640] pass=True ratio=0.1219 defect=0.1122
+[box 0046/640] pass=True ratio=0.1220 defect=0.1121
+[box 0047/640] pass=True ratio=0.1219 defect=0.1121
+[box 0048/640] pass=True ratio=0.1217 defect=0.1120
+[box 0049/640] pass=True ratio=0.1213 defect=0.1119
+[box 0050/640] pass=True ratio=0.1206 defect=0.1118
+[box 0051/640] pass=True ratio=0.1196 defect=0.1118
+[box 0052/640] pass=True ratio=0.1183 defect=0.1117
+[box 0053/640] pass=True ratio=0.1186 defect=0.1116
+[box 0054/640] pass=True ratio=0.1207 defect=0.1116
+[box 0055/640] pass=True ratio=0.1227 defect=0.1115
+[box 0056/640] pass=True ratio=0.1244 defect=0.1114
+[box 0057/640] pass=True ratio=0.1254 defect=0.1113
+[box 0058/640] pass=True ratio=0.1257 defect=0.1113
+[box 0059/640] pass=True ratio=0.1253 defect=0.1112
+[box 0060/640] pass=True ratio=0.1236 defect=0.1112
+[box 0061/640] pass=True ratio=0.1208 defect=0.1111
+[box 0062/640] pass=True ratio=0.1226 defect=0.1111
+[box 0063/640] pass=True ratio=0.1333 defect=0.1110
+[box 0064/640] pass=True ratio=0.1484 defect=0.1110
+[box 0065/640] pass=True ratio=0.1342 defect=0.1096
+[box 0066/640] pass=True ratio=0.1287 defect=0.1096
+[box 0067/640] pass=True ratio=0.1243 defect=0.1095
+[box 0068/640] pass=True ratio=0.1241 defect=0.1095
+[box 0069/640] pass=True ratio=0.1250 defect=0.1094
+[box 0070/640] pass=True ratio=0.1247 defect=0.1094
+[box 0071/640] pass=True ratio=0.1237 defect=0.1093
+[box 0072/640] pass=True ratio=0.1223 defect=0.1093
+[box 0073/640] pass=True ratio=0.1206 defect=0.1092
+[box 0074/640] pass=True ratio=0.1188 defect=0.1092
+[box 0075/640] pass=True ratio=0.1170 defect=0.1091
+[box 0076/640] pass=True ratio=0.1154 defect=0.1091
+[box 0077/640] pass=True ratio=0.1156 defect=0.1090
+[box 0078/640] pass=True ratio=0.1161 defect=0.1090
+[box 0079/640] pass=True ratio=0.1167 defect=0.1089
+[box 0080/640] pass=True ratio=0.1174 defect=0.1089
+[box 0081/640] pass=True ratio=0.1180 defect=0.1088
+[box 0082/640] pass=True ratio=0.1185 defect=0.1088
+[box 0083/640] pass=True ratio=0.1191 defect=0.1088
+[box 0084/640] pass=True ratio=0.1195 defect=0.1087
+[box 0085/640] pass=True ratio=0.1197 defect=0.1087
+[box 0086/640] pass=True ratio=0.1198 defect=0.1086
+[box 0087/640] pass=True ratio=0.1198 defect=0.1086
+[box 0088/640] pass=True ratio=0.1196 defect=0.1085
+[box 0089/640] pass=True ratio=0.1193 defect=0.1085
+[box 0090/640] pass=True ratio=0.1198 defect=0.1084
+[box 0091/640] pass=True ratio=0.1203 defect=0.1084
+[box 0092/640] pass=True ratio=0.1207 defect=0.1083
+[box 0093/640] pass=True ratio=0.1209 defect=0.1083
+[box 0094/640] pass=True ratio=0.1208 defect=0.1083
+[box 0095/640] pass=True ratio=0.1205 defect=0.1082
+[box 0096/640] pass=True ratio=0.1200 defect=0.1082
+[box 0097/640] pass=True ratio=0.1192 defect=0.1081
+[box 0098/640] pass=True ratio=0.1182 defect=0.1081
+[box 0099/640] pass=True ratio=0.1171 defect=0.1080
+[box 0100/640] pass=True ratio=0.1157 defect=0.1080
+[box 0101/640] pass=True ratio=0.1142 defect=0.1080
+[box 0102/640] pass=True ratio=0.1127 defect=0.1079
+[box 0103/640] pass=True ratio=0.1112 defect=0.1079
+[box 0104/640] pass=True ratio=0.1097 defect=0.1078
+[box 0105/640] pass=True ratio=0.1088 defect=0.1078
+[box 0106/640] pass=True ratio=0.1096 defect=0.1078
+[box 0107/640] pass=True ratio=0.1109 defect=0.1077
+[box 0108/640] pass=True ratio=0.1118 defect=0.1077
+[box 0109/640] pass=True ratio=0.1126 defect=0.1076
+[box 0110/640] pass=True ratio=0.1130 defect=0.1076
+[box 0111/640] pass=True ratio=0.1131 defect=0.1076
+[box 0112/640] pass=True ratio=0.1129 defect=0.1075
+[box 0113/640] pass=True ratio=0.1124 defect=0.1075
+[box 0114/640] pass=True ratio=0.1115 defect=0.1075
+[box 0115/640] pass=True ratio=0.1103 defect=0.1074
+[box 0116/640] pass=True ratio=0.1089 defect=0.1074
+[box 0117/640] pass=True ratio=0.1088 defect=0.1073
+[box 0118/640] pass=True ratio=0.1101 defect=0.1073
+[box 0119/640] pass=True ratio=0.1120 defect=0.1073
+[box 0120/640] pass=True ratio=0.1138 defect=0.1072
+[box 0121/640] pass=True ratio=0.1154 defect=0.1072
+[box 0122/640] pass=True ratio=0.1165 defect=0.1072
+[box 0123/640] pass=True ratio=0.1170 defect=0.1071
+[box 0124/640] pass=True ratio=0.1168 defect=0.1071
+[box 0125/640] pass=True ratio=0.1155 defect=0.1071
+[box 0126/640] pass=True ratio=0.1156 defect=0.1070
+[box 0127/640] pass=True ratio=0.1189 defect=0.1070
+[box 0128/640] pass=True ratio=0.1232 defect=0.1069
+[box 0129/640] pass=True ratio=0.1110 defect=0.1047
+[box 0130/640] pass=True ratio=0.1105 defect=0.1047
+[box 0131/640] pass=True ratio=0.1108 defect=0.1046
+[box 0132/640] pass=True ratio=0.1119 defect=0.1046
+[box 0133/640] pass=True ratio=0.1134 defect=0.1046
+[box 0134/640] pass=True ratio=0.1141 defect=0.1045
+[box 0135/640] pass=True ratio=0.1145 defect=0.1045
+[box 0136/640] pass=True ratio=0.1145 defect=0.1045
+[box 0137/640] pass=True ratio=0.1142 defect=0.1044
+[box 0138/640] pass=True ratio=0.1138 defect=0.1044
+[box 0139/640] pass=True ratio=0.1138 defect=0.1044
+[box 0140/640] pass=True ratio=0.1141 defect=0.1043
+[box 0141/640] pass=True ratio=0.1143 defect=0.1043
+[box 0142/640] pass=True ratio=0.1146 defect=0.1043
+[box 0143/640] pass=True ratio=0.1148 defect=0.1042
+[box 0144/640] pass=True ratio=0.1149 defect=0.1042
+[box 0145/640] pass=True ratio=0.1151 defect=0.1042
+[box 0146/640] pass=True ratio=0.1151 defect=0.1042
+[box 0147/640] pass=True ratio=0.1152 defect=0.1041
+[box 0148/640] pass=True ratio=0.1152 defect=0.1041
+[box 0149/640] pass=True ratio=0.1151 defect=0.1041
+[box 0150/640] pass=True ratio=0.1150 defect=0.1040
+[box 0151/640] pass=True ratio=0.1148 defect=0.1040
+[box 0152/640] pass=True ratio=0.1147 defect=0.1040
+[box 0153/640] pass=True ratio=0.1148 defect=0.1039
+[box 0154/640] pass=True ratio=0.1151 defect=0.1039
+[box 0155/640] pass=True ratio=0.1154 defect=0.1039
+[box 0156/640] pass=True ratio=0.1156 defect=0.1039
+[box 0157/640] pass=True ratio=0.1157 defect=0.1038
+[box 0158/640] pass=True ratio=0.1157 defect=0.1038
+[box 0159/640] pass=True ratio=0.1155 defect=0.1038
+[box 0160/640] pass=True ratio=0.1153 defect=0.1037
+[box 0161/640] pass=True ratio=0.1150 defect=0.1037
+[box 0162/640] pass=True ratio=0.1146 defect=0.1037
+[box 0163/640] pass=True ratio=0.1141 defect=0.1037
+[box 0164/640] pass=True ratio=0.1136 defect=0.1036
+[box 0165/640] pass=True ratio=0.1129 defect=0.1036
+[box 0166/640] pass=True ratio=0.1122 defect=0.1036
+[box 0167/640] pass=True ratio=0.1114 defect=0.1036
+[box 0168/640] pass=True ratio=0.1107 defect=0.1035
+[box 0169/640] pass=True ratio=0.1103 defect=0.1035
+[box 0170/640] pass=True ratio=0.1100 defect=0.1035
+[box 0171/640] pass=True ratio=0.1097 defect=0.1035
+[box 0172/640] pass=True ratio=0.1094 defect=0.1034
+[box 0173/640] pass=True ratio=0.1090 defect=0.1034
+[box 0174/640] pass=True ratio=0.1086 defect=0.1034
+[box 0175/640] pass=True ratio=0.1081 defect=0.1034
+[box 0176/640] pass=True ratio=0.1076 defect=0.1033
+[box 0177/640] pass=True ratio=0.1071 defect=0.1033
+[box 0178/640] pass=True ratio=0.1066 defect=0.1033
+[box 0179/640] pass=True ratio=0.1061 defect=0.1033
+[box 0180/640] pass=True ratio=0.1058 defect=0.1032
+[box 0181/640] pass=True ratio=0.1058 defect=0.1032
+[box 0182/640] pass=True ratio=0.1062 defect=0.1032
+[box 0183/640] pass=True ratio=0.1065 defect=0.1032
+[box 0184/640] pass=True ratio=0.1068 defect=0.1031
+[box 0185/640] pass=True ratio=0.1070 defect=0.1031
+[box 0186/640] pass=True ratio=0.1070 defect=0.1031
+[box 0187/640] pass=True ratio=0.1069 defect=0.1031
+[box 0188/640] pass=True ratio=0.1065 defect=0.1030
+[box 0189/640] pass=True ratio=0.1056 defect=0.1030
+[box 0190/640] pass=True ratio=0.1053 defect=0.1030
+[box 0191/640] pass=True ratio=0.1077 defect=0.1030
+[box 0192/640] pass=True ratio=0.1109 defect=0.1029
+[box 0193/640] pass=True ratio=0.1079 defect=0.1003
+[box 0194/640] pass=True ratio=0.1100 defect=0.1002
+[box 0195/640] pass=True ratio=0.1118 defect=0.1002
+[box 0196/640] pass=True ratio=0.1134 defect=0.1002
+[box 0197/640] pass=True ratio=0.1144 defect=0.1002
+[box 0198/640] pass=True ratio=0.1155 defect=0.1002
+[box 0199/640] pass=True ratio=0.1162 defect=0.1002
+[box 0200/640] pass=True ratio=0.1163 defect=0.1002
+[box 0201/640] pass=True ratio=0.1161 defect=0.1002
+[box 0202/640] pass=True ratio=0.1156 defect=0.1002
+[box 0203/640] pass=True ratio=0.1150 defect=0.1002
+[box 0204/640] pass=True ratio=0.1143 defect=0.1002
+[box 0205/640] pass=True ratio=0.1137 defect=0.1003
+[box 0206/640] pass=True ratio=0.1132 defect=0.1003
+[box 0207/640] pass=True ratio=0.1127 defect=0.1003
+[box 0208/640] pass=True ratio=0.1124 defect=0.1003
+[box 0209/640] pass=True ratio=0.1122 defect=0.1003
+[box 0210/640] pass=True ratio=0.1120 defect=0.1003
+[box 0211/640] pass=True ratio=0.1118 defect=0.1003
+[box 0212/640] pass=True ratio=0.1116 defect=0.1003
+[box 0213/640] pass=True ratio=0.1114 defect=0.1003
+[box 0214/640] pass=True ratio=0.1112 defect=0.1003
+[box 0215/640] pass=True ratio=0.1110 defect=0.1003
+[box 0216/640] pass=True ratio=0.1108 defect=0.1004
+[box 0217/640] pass=True ratio=0.1106 defect=0.1004
+[box 0218/640] pass=True ratio=0.1104 defect=0.1004
+[box 0219/640] pass=True ratio=0.1102 defect=0.1004
+[box 0220/640] pass=True ratio=0.1102 defect=0.1004
+[box 0221/640] pass=True ratio=0.1100 defect=0.1004
+[box 0222/640] pass=True ratio=0.1099 defect=0.1004
+[box 0223/640] pass=True ratio=0.1097 defect=0.1004
+[box 0224/640] pass=True ratio=0.1094 defect=0.1004
+[box 0225/640] pass=True ratio=0.1091 defect=0.1004
+[box 0226/640] pass=True ratio=0.1087 defect=0.1005
+[box 0227/640] pass=True ratio=0.1082 defect=0.1005
+[box 0228/640] pass=True ratio=0.1077 defect=0.1005
+[box 0229/640] pass=True ratio=0.1071 defect=0.1005
+[box 0230/640] pass=True ratio=0.1065 defect=0.1005
+[box 0231/640] pass=True ratio=0.1058 defect=0.1005
+[box 0232/640] pass=True ratio=0.1052 defect=0.1005
+[box 0233/640] pass=True ratio=0.1047 defect=0.1005
+[box 0234/640] pass=True ratio=0.1042 defect=0.1005
+[box 0235/640] pass=True ratio=0.1037 defect=0.1005
+[box 0236/640] pass=True ratio=0.1032 defect=0.1006
+[box 0237/640] pass=True ratio=0.1028 defect=0.1006
+[box 0238/640] pass=True ratio=0.1026 defect=0.1006
+[box 0239/640] pass=True ratio=0.1025 defect=0.1006
+[box 0240/640] pass=True ratio=0.1025 defect=0.1006
+[box 0241/640] pass=True ratio=0.1026 defect=0.1006
+[box 0242/640] pass=True ratio=0.1028 defect=0.1006
+[box 0243/640] pass=True ratio=0.1031 defect=0.1006
+[box 0244/640] pass=True ratio=0.1035 defect=0.1007
+[box 0245/640] pass=True ratio=0.1040 defect=0.1007
+[box 0246/640] pass=True ratio=0.1047 defect=0.1007
+[box 0247/640] pass=True ratio=0.1054 defect=0.1007
+[box 0248/640] pass=True ratio=0.1061 defect=0.1007
+[box 0249/640] pass=True ratio=0.1067 defect=0.1007
+[box 0250/640] pass=True ratio=0.1072 defect=0.1007
+[box 0251/640] pass=True ratio=0.1076 defect=0.1007
+[box 0252/640] pass=True ratio=0.1078 defect=0.1008
+[box 0253/640] pass=True ratio=0.1076 defect=0.1008
+[box 0254/640] pass=True ratio=0.1070 defect=0.1008
+[box 0255/640] pass=True ratio=0.1063 defect=0.1008
+[box 0256/640] pass=True ratio=0.1052 defect=0.1008
+[box 0257/640] pass=True ratio=0.1052 defect=0.0987
+[box 0258/640] pass=True ratio=0.1066 defect=0.0987
+[box 0259/640] pass=True ratio=0.1076 defect=0.0987
+[box 0260/640] pass=True ratio=0.1084 defect=0.0987
+[box 0261/640] pass=True ratio=0.1091 defect=0.0987
+[box 0262/640] pass=True ratio=0.1096 defect=0.0987
+[box 0263/640] pass=True ratio=0.1099 defect=0.0987
+[box 0264/640] pass=True ratio=0.1101 defect=0.0988
+[box 0265/640] pass=True ratio=0.1102 defect=0.0988
+[box 0266/640] pass=True ratio=0.1102 defect=0.0988
+[box 0267/640] pass=True ratio=0.1101 defect=0.0988
+[box 0268/640] pass=True ratio=0.1099 defect=0.0988
+[box 0269/640] pass=True ratio=0.1098 defect=0.0988
+[box 0270/640] pass=True ratio=0.1096 defect=0.0988
+[box 0271/640] pass=True ratio=0.1095 defect=0.0988
+[box 0272/640] pass=True ratio=0.1095 defect=0.0988
+[box 0273/640] pass=True ratio=0.1094 defect=0.0988
+[box 0274/640] pass=True ratio=0.1094 defect=0.0988
+[box 0275/640] pass=True ratio=0.1093 defect=0.0989
+[box 0276/640] pass=True ratio=0.1093 defect=0.0989
+[box 0277/640] pass=True ratio=0.1093 defect=0.0989
+[box 0278/640] pass=True ratio=0.1093 defect=0.0989
+[box 0279/640] pass=True ratio=0.1093 defect=0.0989
+[box 0280/640] pass=True ratio=0.1093 defect=0.0989
+[box 0281/640] pass=True ratio=0.1093 defect=0.0989
+[box 0282/640] pass=True ratio=0.1092 defect=0.0989
+[box 0283/640] pass=True ratio=0.1091 defect=0.0989
+[box 0284/640] pass=True ratio=0.1089 defect=0.0990
+[box 0285/640] pass=True ratio=0.1087 defect=0.0990
+[box 0286/640] pass=True ratio=0.1084 defect=0.0990
+[box 0287/640] pass=True ratio=0.1080 defect=0.0990
+[box 0288/640] pass=True ratio=0.1076 defect=0.0990
+[box 0289/640] pass=True ratio=0.1072 defect=0.0991
+[box 0290/640] pass=True ratio=0.1066 defect=0.0991
+[box 0291/640] pass=True ratio=0.1061 defect=0.0991
+[box 0292/640] pass=True ratio=0.1055 defect=0.0992
+[box 0293/640] pass=True ratio=0.1049 defect=0.0992
+[box 0294/640] pass=True ratio=0.1043 defect=0.0993
+[box 0295/640] pass=True ratio=0.1037 defect=0.0993
+[box 0296/640] pass=True ratio=0.1031 defect=0.0993
+[box 0297/640] pass=True ratio=0.1025 defect=0.0994
+[box 0298/640] pass=True ratio=0.1019 defect=0.0994
+[box 0299/640] pass=True ratio=0.1013 defect=0.0995
+[box 0300/640] pass=True ratio=0.1009 defect=0.0995
+[box 0301/640] pass=True ratio=0.1004 defect=0.0996
+[box 0302/640] pass=True ratio=0.1002 defect=0.0996
+[box 0303/640] pass=True ratio=0.1000 defect=0.0996
+[box 0304/640] pass=True ratio=0.1002 defect=0.0997
+[box 0305/640] pass=True ratio=0.1003 defect=0.0997
+[box 0306/640] pass=True ratio=0.1002 defect=0.0998
+[box 0307/640] pass=True ratio=0.1001 defect=0.0998
+[box 0308/640] pass=True ratio=0.1003 defect=0.0998
+[box 0309/640] pass=True ratio=0.1008 defect=0.0999
+[box 0310/640] pass=True ratio=0.1013 defect=0.0999
+[box 0311/640] pass=True ratio=0.1019 defect=0.1000
+[box 0312/640] pass=True ratio=0.1025 defect=0.1000
+[box 0313/640] pass=True ratio=0.1031 defect=0.1001
+[box 0314/640] pass=True ratio=0.1036 defect=0.1001
+[box 0315/640] pass=True ratio=0.1040 defect=0.1001
+[box 0316/640] pass=True ratio=0.1044 defect=0.1002
+[box 0317/640] pass=True ratio=0.1047 defect=0.1002
+[box 0318/640] pass=True ratio=0.1049 defect=0.1003
+[box 0319/640] pass=True ratio=0.1050 defect=0.1003
+[box 0320/640] pass=True ratio=0.1049 defect=0.1004
+[box 0321/640] pass=True ratio=0.1042 defect=0.0984
+[box 0322/640] pass=True ratio=0.1059 defect=0.0984
+[box 0323/640] pass=True ratio=0.1072 defect=0.0984
+[box 0324/640] pass=True ratio=0.1080 defect=0.0985
+[box 0325/640] pass=True ratio=0.1086 defect=0.0985
+[box 0326/640] pass=True ratio=0.1090 defect=0.0985
+[box 0327/640] pass=True ratio=0.1091 defect=0.0986
+[box 0328/640] pass=True ratio=0.1091 defect=0.0986
+[box 0329/640] pass=True ratio=0.1091 defect=0.0986
+[box 0330/640] pass=True ratio=0.1090 defect=0.0987
+[box 0331/640] pass=True ratio=0.1089 defect=0.0987
+[box 0332/640] pass=True ratio=0.1087 defect=0.0987
+[box 0333/640] pass=True ratio=0.1085 defect=0.0988
+[box 0334/640] pass=True ratio=0.1084 defect=0.0988
+[box 0335/640] pass=True ratio=0.1082 defect=0.0988
+[box 0336/640] pass=True ratio=0.1080 defect=0.0989
+[box 0337/640] pass=True ratio=0.1079 defect=0.0989
+[box 0338/640] pass=True ratio=0.1078 defect=0.0990
+[box 0339/640] pass=True ratio=0.1077 defect=0.0990
+[box 0340/640] pass=True ratio=0.1076 defect=0.0990
+[box 0341/640] pass=True ratio=0.1075 defect=0.0991
+[box 0342/640] pass=True ratio=0.1075 defect=0.0991
+[box 0343/640] pass=True ratio=0.1075 defect=0.0991
+[box 0344/640] pass=True ratio=0.1075 defect=0.0992
+[box 0345/640] pass=True ratio=0.1076 defect=0.0992
+[box 0346/640] pass=True ratio=0.1077 defect=0.0993
+[box 0347/640] pass=True ratio=0.1079 defect=0.0993
+[box 0348/640] pass=True ratio=0.1081 defect=0.0993
+[box 0349/640] pass=True ratio=0.1082 defect=0.0994
+[box 0350/640] pass=True ratio=0.1084 defect=0.0994
+[box 0351/640] pass=True ratio=0.1085 defect=0.0995
+[box 0352/640] pass=True ratio=0.1086 defect=0.0995
+[box 0353/640] pass=True ratio=0.1086 defect=0.0995
+[box 0354/640] pass=True ratio=0.1086 defect=0.0996
+[box 0355/640] pass=True ratio=0.1086 defect=0.0996
+[box 0356/640] pass=True ratio=0.1085 defect=0.0997
+[box 0357/640] pass=True ratio=0.1084 defect=0.0997
+[box 0358/640] pass=True ratio=0.1082 defect=0.0997
+[box 0359/640] pass=True ratio=0.1081 defect=0.0998
+[box 0360/640] pass=True ratio=0.1079 defect=0.0998
+[box 0361/640] pass=True ratio=0.1077 defect=0.0999
+[box 0362/640] pass=True ratio=0.1075 defect=0.0999
+[box 0363/640] pass=True ratio=0.1072 defect=0.0999
+[box 0364/640] pass=True ratio=0.1070 defect=0.1000
+[box 0365/640] pass=True ratio=0.1068 defect=0.1000
+[box 0366/640] pass=True ratio=0.1066 defect=0.1001
+[box 0367/640] pass=True ratio=0.1065 defect=0.1001
+[box 0368/640] pass=True ratio=0.1063 defect=0.1002
+[box 0369/640] pass=True ratio=0.1062 defect=0.1002
+[box 0370/640] pass=True ratio=0.1062 defect=0.1002
+[box 0371/640] pass=True ratio=0.1061 defect=0.1003
+[box 0372/640] pass=True ratio=0.1060 defect=0.1003
+[box 0373/640] pass=True ratio=0.1059 defect=0.1004
+[box 0374/640] pass=True ratio=0.1058 defect=0.1004
+[box 0375/640] pass=True ratio=0.1057 defect=0.1004
+[box 0376/640] pass=True ratio=0.1056 defect=0.1005
+[box 0377/640] pass=True ratio=0.1056 defect=0.1005
+[box 0378/640] pass=True ratio=0.1057 defect=0.1006
+[box 0379/640] pass=True ratio=0.1060 defect=0.1006
+[box 0380/640] pass=True ratio=0.1062 defect=0.1007
+[box 0381/640] pass=True ratio=0.1065 defect=0.1007
+[box 0382/640] pass=True ratio=0.1067 defect=0.1008
+[box 0383/640] pass=True ratio=0.1068 defect=0.1008
+[box 0384/640] pass=True ratio=0.1069 defect=0.1008
+[box 0385/640] pass=True ratio=0.1092 defect=0.0995
+[box 0386/640] pass=True ratio=0.1121 defect=0.0996
+[box 0387/640] pass=True ratio=0.1141 defect=0.0996
+[box 0388/640] pass=True ratio=0.1153 defect=0.0996
+[box 0389/640] pass=True ratio=0.1159 defect=0.0997
+[box 0390/640] pass=True ratio=0.1161 defect=0.0997
+[box 0391/640] pass=True ratio=0.1159 defect=0.0997
+[box 0392/640] pass=True ratio=0.1155 defect=0.0998
+[box 0393/640] pass=True ratio=0.1152 defect=0.0998
+[box 0394/640] pass=True ratio=0.1146 defect=0.0998
+[box 0395/640] pass=True ratio=0.1139 defect=0.0999
+[box 0396/640] pass=True ratio=0.1132 defect=0.0999
+[box 0397/640] pass=True ratio=0.1125 defect=0.0999
+[box 0398/640] pass=True ratio=0.1118 defect=0.1000
+[box 0399/640] pass=True ratio=0.1112 defect=0.1000
+[box 0400/640] pass=True ratio=0.1106 defect=0.1000
+[box 0401/640] pass=True ratio=0.1101 defect=0.1001
+[box 0402/640] pass=True ratio=0.1097 defect=0.1001
+[box 0403/640] pass=True ratio=0.1094 defect=0.1001
+[box 0404/640] pass=True ratio=0.1091 defect=0.1002
+[box 0405/640] pass=True ratio=0.1089 defect=0.1002
+[box 0406/640] pass=True ratio=0.1088 defect=0.1002
+[box 0407/640] pass=True ratio=0.1087 defect=0.1003
+[box 0408/640] pass=True ratio=0.1086 defect=0.1003
+[box 0409/640] pass=True ratio=0.1085 defect=0.1004
+[box 0410/640] pass=True ratio=0.1084 defect=0.1004
+[box 0411/640] pass=True ratio=0.1084 defect=0.1004
+[box 0412/640] pass=True ratio=0.1083 defect=0.1005
+[box 0413/640] pass=True ratio=0.1083 defect=0.1005
+[box 0414/640] pass=True ratio=0.1082 defect=0.1005
+[box 0415/640] pass=True ratio=0.1082 defect=0.1006
+[box 0416/640] pass=True ratio=0.1082 defect=0.1006
+[box 0417/640] pass=True ratio=0.1081 defect=0.1006
+[box 0418/640] pass=True ratio=0.1079 defect=0.1007
+[box 0419/640] pass=True ratio=0.1077 defect=0.1007
+[box 0420/640] pass=True ratio=0.1075 defect=0.1007
+[box 0421/640] pass=True ratio=0.1073 defect=0.1008
+[box 0422/640] pass=True ratio=0.1070 defect=0.1008
+[box 0423/640] pass=True ratio=0.1067 defect=0.1008
+[box 0424/640] pass=True ratio=0.1064 defect=0.1009
+[box 0425/640] pass=True ratio=0.1062 defect=0.1009
+[box 0426/640] pass=True ratio=0.1059 defect=0.1009
+[box 0427/640] pass=True ratio=0.1057 defect=0.1010
+[box 0428/640] pass=True ratio=0.1055 defect=0.1010
+[box 0429/640] pass=True ratio=0.1054 defect=0.1010
+[box 0430/640] pass=True ratio=0.1054 defect=0.1011
+[box 0431/640] pass=True ratio=0.1055 defect=0.1011
+[box 0432/640] pass=True ratio=0.1057 defect=0.1011
+[box 0433/640] pass=True ratio=0.1061 defect=0.1012
+[box 0434/640] pass=True ratio=0.1067 defect=0.1012
+[box 0435/640] pass=True ratio=0.1073 defect=0.1012
+[box 0436/640] pass=True ratio=0.1080 defect=0.1013
+[box 0437/640] pass=True ratio=0.1087 defect=0.1013
+[box 0438/640] pass=True ratio=0.1095 defect=0.1014
+[box 0439/640] pass=True ratio=0.1102 defect=0.1014
+[box 0440/640] pass=True ratio=0.1108 defect=0.1014
+[box 0441/640] pass=True ratio=0.1112 defect=0.1015
+[box 0442/640] pass=True ratio=0.1113 defect=0.1015
+[box 0443/640] pass=True ratio=0.1110 defect=0.1015
+[box 0444/640] pass=True ratio=0.1103 defect=0.1016
+[box 0445/640] pass=True ratio=0.1094 defect=0.1016
+[box 0446/640] pass=True ratio=0.1078 defect=0.1016
+[box 0447/640] pass=True ratio=0.1056 defect=0.1017
+[box 0448/640] pass=True ratio=0.1070 defect=0.1017
+[box 0449/640] pass=True ratio=0.1096 defect=0.1005
+[box 0450/640] pass=True ratio=0.1112 defect=0.1005
+[box 0451/640] pass=True ratio=0.1123 defect=0.1006
+[box 0452/640] pass=True ratio=0.1133 defect=0.1006
+[box 0453/640] pass=True ratio=0.1139 defect=0.1006
+[box 0454/640] pass=True ratio=0.1145 defect=0.1006
+[box 0455/640] pass=True ratio=0.1148 defect=0.1007
+[box 0456/640] pass=True ratio=0.1149 defect=0.1007
+[box 0457/640] pass=True ratio=0.1149 defect=0.1007
+[box 0458/640] pass=True ratio=0.1149 defect=0.1008
+[box 0459/640] pass=True ratio=0.1148 defect=0.1008
+[box 0460/640] pass=True ratio=0.1147 defect=0.1008
+[box 0461/640] pass=True ratio=0.1146 defect=0.1009
+[box 0462/640] pass=True ratio=0.1145 defect=0.1009
+[box 0463/640] pass=True ratio=0.1144 defect=0.1009
+[box 0464/640] pass=True ratio=0.1143 defect=0.1009
+[box 0465/640] pass=True ratio=0.1142 defect=0.1010
+[box 0466/640] pass=True ratio=0.1142 defect=0.1010
+[box 0467/640] pass=True ratio=0.1143 defect=0.1010
+[box 0468/640] pass=True ratio=0.1143 defect=0.1011
+[box 0469/640] pass=True ratio=0.1144 defect=0.1011
+[box 0470/640] pass=True ratio=0.1144 defect=0.1011
+[box 0471/640] pass=True ratio=0.1144 defect=0.1011
+[box 0472/640] pass=True ratio=0.1144 defect=0.1012
+[box 0473/640] pass=True ratio=0.1143 defect=0.1012
+[box 0474/640] pass=True ratio=0.1141 defect=0.1012
+[box 0475/640] pass=True ratio=0.1139 defect=0.1013
+[box 0476/640] pass=True ratio=0.1136 defect=0.1013
+[box 0477/640] pass=True ratio=0.1133 defect=0.1013
+[box 0478/640] pass=True ratio=0.1129 defect=0.1014
+[box 0479/640] pass=True ratio=0.1124 defect=0.1014
+[box 0480/640] pass=True ratio=0.1119 defect=0.1014
+[box 0481/640] pass=True ratio=0.1113 defect=0.1014
+[box 0482/640] pass=True ratio=0.1107 defect=0.1015
+[box 0483/640] pass=True ratio=0.1100 defect=0.1015
+[box 0484/640] pass=True ratio=0.1093 defect=0.1015
+[box 0485/640] pass=True ratio=0.1085 defect=0.1016
+[box 0486/640] pass=True ratio=0.1078 defect=0.1016
+[box 0487/640] pass=True ratio=0.1071 defect=0.1016
+[box 0488/640] pass=True ratio=0.1065 defect=0.1016
+[box 0489/640] pass=True ratio=0.1059 defect=0.1017
+[box 0490/640] pass=True ratio=0.1054 defect=0.1017
+[box 0491/640] pass=True ratio=0.1049 defect=0.1017
+[box 0492/640] pass=True ratio=0.1046 defect=0.1018
+[box 0493/640] pass=True ratio=0.1043 defect=0.1018
+[box 0494/640] pass=True ratio=0.1042 defect=0.1018
+[box 0495/640] pass=True ratio=0.1042 defect=0.1019
+[box 0496/640] pass=True ratio=0.1044 defect=0.1019
+[box 0497/640] pass=True ratio=0.1048 defect=0.1019
+[box 0498/640] pass=True ratio=0.1053 defect=0.1019
+[box 0499/640] pass=True ratio=0.1059 defect=0.1020
+[box 0500/640] pass=True ratio=0.1067 defect=0.1020
+[box 0501/640] pass=True ratio=0.1075 defect=0.1020
+[box 0502/640] pass=True ratio=0.1084 defect=0.1021
+[box 0503/640] pass=True ratio=0.1092 defect=0.1021
+[box 0504/640] pass=True ratio=0.1101 defect=0.1021
+[box 0505/640] pass=True ratio=0.1109 defect=0.1022
+[box 0506/640] pass=True ratio=0.1115 defect=0.1022
+[box 0507/640] pass=True ratio=0.1119 defect=0.1022
+[box 0508/640] pass=True ratio=0.1121 defect=0.1022
+[box 0509/640] pass=True ratio=0.1120 defect=0.1023
+[box 0510/640] pass=True ratio=0.1113 defect=0.1023
+[box 0511/640] pass=True ratio=0.1101 defect=0.1023
+[box 0512/640] pass=True ratio=0.1081 defect=0.1024
+[box 0513/640] pass=True ratio=0.1076 defect=0.1008
+[box 0514/640] pass=True ratio=0.1069 defect=0.1009
+[box 0515/640] pass=True ratio=0.1066 defect=0.1009
+[box 0516/640] pass=True ratio=0.1067 defect=0.1009
+[box 0517/640] pass=True ratio=0.1070 defect=0.1009
+[box 0518/640] pass=True ratio=0.1076 defect=0.1010
+[box 0519/640] pass=True ratio=0.1084 defect=0.1010
+[box 0520/640] pass=True ratio=0.1091 defect=0.1010
+[box 0521/640] pass=True ratio=0.1099 defect=0.1010
+[box 0522/640] pass=True ratio=0.1107 defect=0.1010
+[box 0523/640] pass=True ratio=0.1113 defect=0.1011
+[box 0524/640] pass=True ratio=0.1120 defect=0.1011
+[box 0525/640] pass=True ratio=0.1125 defect=0.1011
+[box 0526/640] pass=True ratio=0.1130 defect=0.1011
+[box 0527/640] pass=True ratio=0.1134 defect=0.1011
+[box 0528/640] pass=True ratio=0.1137 defect=0.1012
+[box 0529/640] pass=True ratio=0.1140 defect=0.1012
+[box 0530/640] pass=True ratio=0.1142 defect=0.1012
+[box 0531/640] pass=True ratio=0.1143 defect=0.1012
+[box 0532/640] pass=True ratio=0.1144 defect=0.1013
+[box 0533/640] pass=True ratio=0.1144 defect=0.1013
+[box 0534/640] pass=True ratio=0.1144 defect=0.1013
+[box 0535/640] pass=True ratio=0.1144 defect=0.1013
+[box 0536/640] pass=True ratio=0.1143 defect=0.1013
+[box 0537/640] pass=True ratio=0.1142 defect=0.1014
+[box 0538/640] pass=True ratio=0.1141 defect=0.1014
+[box 0539/640] pass=True ratio=0.1140 defect=0.1014
+[box 0540/640] pass=True ratio=0.1139 defect=0.1014
+[box 0541/640] pass=True ratio=0.1138 defect=0.1015
+[box 0542/640] pass=True ratio=0.1137 defect=0.1015
+[box 0543/640] pass=True ratio=0.1135 defect=0.1015
+[box 0544/640] pass=True ratio=0.1134 defect=0.1015
+[box 0545/640] pass=True ratio=0.1133 defect=0.1016
+[box 0546/640] pass=True ratio=0.1131 defect=0.1016
+[box 0547/640] pass=True ratio=0.1130 defect=0.1016
+[box 0548/640] pass=True ratio=0.1128 defect=0.1016
+[box 0549/640] pass=True ratio=0.1126 defect=0.1016
+[box 0550/640] pass=True ratio=0.1124 defect=0.1017
+[box 0551/640] pass=True ratio=0.1121 defect=0.1017
+[box 0552/640] pass=True ratio=0.1119 defect=0.1017
+[box 0553/640] pass=True ratio=0.1116 defect=0.1017
+[box 0554/640] pass=True ratio=0.1112 defect=0.1018
+[box 0555/640] pass=True ratio=0.1108 defect=0.1018
+[box 0556/640] pass=True ratio=0.1103 defect=0.1018
+[box 0557/640] pass=True ratio=0.1097 defect=0.1018
+[box 0558/640] pass=True ratio=0.1090 defect=0.1019
+[box 0559/640] pass=True ratio=0.1082 defect=0.1019
+[box 0560/640] pass=True ratio=0.1074 defect=0.1019
+[box 0561/640] pass=True ratio=0.1065 defect=0.1019
+[box 0562/640] pass=True ratio=0.1055 defect=0.1020
+[box 0563/640] pass=True ratio=0.1045 defect=0.1020
+[box 0564/640] pass=True ratio=0.1035 defect=0.1020
+[box 0565/640] pass=True ratio=0.1030 defect=0.1020
+[box 0566/640] pass=True ratio=0.1040 defect=0.1021
+[box 0567/640] pass=True ratio=0.1050 defect=0.1021
+[box 0568/640] pass=True ratio=0.1057 defect=0.1021
+[box 0569/640] pass=True ratio=0.1062 defect=0.1021
+[box 0570/640] pass=True ratio=0.1065 defect=0.1022
+[box 0571/640] pass=True ratio=0.1064 defect=0.1022
+[box 0572/640] pass=True ratio=0.1062 defect=0.1022
+[box 0573/640] pass=True ratio=0.1054 defect=0.1022
+[box 0574/640] pass=True ratio=0.1041 defect=0.1023
+[box 0575/640] pass=True ratio=0.1062 defect=0.1023
+[box 0576/640] pass=True ratio=0.1106 defect=0.1023
+[box 0577/640] pass=True ratio=0.1090 defect=0.1006
+[box 0578/640] pass=True ratio=0.1086 defect=0.1006
+[box 0579/640] pass=True ratio=0.1085 defect=0.1006
+[box 0580/640] pass=True ratio=0.1087 defect=0.1007
+[box 0581/640] pass=True ratio=0.1092 defect=0.1007
+[box 0582/640] pass=True ratio=0.1099 defect=0.1007
+[box 0583/640] pass=True ratio=0.1107 defect=0.1007
+[box 0584/640] pass=True ratio=0.1115 defect=0.1007
+[box 0585/640] pass=True ratio=0.1123 defect=0.1008
+[box 0586/640] pass=True ratio=0.1130 defect=0.1008
+[box 0587/640] pass=True ratio=0.1137 defect=0.1008
+[box 0588/640] pass=True ratio=0.1143 defect=0.1008
+[box 0589/640] pass=True ratio=0.1148 defect=0.1008
+[box 0590/640] pass=True ratio=0.1152 defect=0.1008
+[box 0591/640] pass=True ratio=0.1156 defect=0.1009
+[box 0592/640] pass=True ratio=0.1158 defect=0.1009
+[box 0593/640] pass=True ratio=0.1159 defect=0.1009
+[box 0594/640] pass=True ratio=0.1160 defect=0.1009
+[box 0595/640] pass=True ratio=0.1159 defect=0.1009
+[box 0596/640] pass=True ratio=0.1157 defect=0.1009
+[box 0597/640] pass=True ratio=0.1155 defect=0.1010
+[box 0598/640] pass=True ratio=0.1151 defect=0.1010
+[box 0599/640] pass=True ratio=0.1147 defect=0.1010
+[box 0600/640] pass=True ratio=0.1142 defect=0.1010
+[box 0601/640] pass=True ratio=0.1137 defect=0.1010
+[box 0602/640] pass=True ratio=0.1130 defect=0.1011
+[box 0603/640] pass=True ratio=0.1124 defect=0.1011
+[box 0604/640] pass=True ratio=0.1117 defect=0.1011
+[box 0605/640] pass=True ratio=0.1109 defect=0.1011
+[box 0606/640] pass=True ratio=0.1101 defect=0.1011
+[box 0607/640] pass=True ratio=0.1093 defect=0.1011
+[box 0608/640] pass=True ratio=0.1085 defect=0.1012
+[box 0609/640] pass=True ratio=0.1077 defect=0.1012
+[box 0610/640] pass=True ratio=0.1070 defect=0.1012
+[box 0611/640] pass=True ratio=0.1062 defect=0.1012
+[box 0612/640] pass=True ratio=0.1055 defect=0.1012
+[box 0613/640] pass=True ratio=0.1047 defect=0.1012
+[box 0614/640] pass=True ratio=0.1041 defect=0.1013
+[box 0615/640] pass=True ratio=0.1035 defect=0.1013
+[box 0616/640] pass=True ratio=0.1029 defect=0.1013
+[box 0617/640] pass=True ratio=0.1024 defect=0.1013
+[box 0618/640] pass=True ratio=0.1019 defect=0.1013
+[box 0619/640] pass=True ratio=0.1016 defect=0.1013
+[box 0620/640] pass=True ratio=0.1019 defect=0.1014
+[box 0621/640] pass=True ratio=0.1021 defect=0.1014
+[box 0622/640] pass=True ratio=0.1023 defect=0.1014
+[box 0623/640] pass=True ratio=0.1024 defect=0.1014
+[box 0624/640] pass=True ratio=0.1024 defect=0.1014
+[box 0625/640] pass=True ratio=0.1024 defect=0.1015
+[box 0626/640] pass=True ratio=0.1024 defect=0.1015
+[box 0627/640] pass=True ratio=0.1023 defect=0.1015
+[box 0628/640] pass=True ratio=0.1021 defect=0.1015
+[box 0629/640] pass=True ratio=0.1023 defect=0.1015
+[box 0630/640] pass=True ratio=0.1027 defect=0.1015
+[box 0631/640] pass=True ratio=0.1031 defect=0.1016
+[box 0632/640] pass=True ratio=0.1036 defect=0.1016
+[box 0633/640] pass=True ratio=0.1041 defect=0.1016
+[box 0634/640] pass=True ratio=0.1046 defect=0.1016
+[box 0635/640] pass=True ratio=0.1052 defect=0.1016
+[box 0636/640] pass=True ratio=0.1059 defect=0.1017
+[box 0637/640] pass=True ratio=0.1068 defect=0.1017
+[box 0638/640] pass=True ratio=0.1078 defect=0.1017
+[box 0639/640] pass=True ratio=0.1089 defect=0.1017
+[box 0640/640] pass=True ratio=0.1102 defect=0.1017
+
+========================================================================================================================
+STAGE 2 - SHARED-ENDPOINT CONTINUATION
+========================================================================================================================
+[overlap 01/09] pass=True gap=1.211e-13 ratio=0.0078
+[overlap 02/09] pass=True gap=4.257e-13 ratio=0.0059
+[overlap 03/09] pass=True gap=1.438e-13 ratio=0.0053
+[overlap 04/09] pass=True gap=6.670e-14 ratio=0.0055
+[overlap 05/09] pass=True gap=1.037e-13 ratio=0.0055
+[overlap 06/09] pass=True gap=8.988e-14 ratio=0.0055
+[overlap 07/09] pass=True gap=1.010e-12 ratio=0.0063
+[overlap 08/09] pass=True gap=3.945e-13 ratio=0.0053
+[overlap 09/09] pass=True gap=1.133e-13 ratio=0.0073
+
+========================================================================================================================
+STAGE 3 - EXACT-ROOT L6 AND FINITE-WINDOW DESCENT
+========================================================================================================================
+[endpoint 00/10] pass=True ratio=0.0066
+[endpoint 01/10] pass=True ratio=0.0078
+[endpoint 02/10] pass=True ratio=0.0059
+[endpoint 03/10] pass=True ratio=0.0053
+[endpoint 04/10] pass=True ratio=0.0055
+[endpoint 05/10] pass=True ratio=0.0055
+[endpoint 06/10] pass=True ratio=0.0055
+[endpoint 07/10] pass=True ratio=0.0063
+[endpoint 08/10] pass=True ratio=0.0053
+[endpoint 09/10] pass=True ratio=0.0073
+[endpoint 10/10] pass=True ratio=0.0069
+[descent 01/10] pass=True L6_upper=-3.375e-02 finite_max_upper=-4.309e-11
+[descent 02/10] pass=True L6_upper=-3.052e-02 finite_max_upper=-3.743e-11
+[descent 03/10] pass=False L6_upper=-2.742e-02 finite_max_upper=3.615e-09
+[descent 04/10] pass=False L6_upper=-2.456e-02 finite_max_upper=1.524e-08
+[descent 05/10] pass=False L6_upper=-2.201e-02 finite_max_upper=2.548e-08
+[descent 06/10] pass=False L6_upper=-1.980e-02 finite_max_upper=3.419e-08
+[descent 07/10] pass=False L6_upper=-1.792e-02 finite_max_upper=4.149e-08
+[descent 08/10] pass=False L6_upper=-1.635e-02 finite_max_upper=4.746e-08
+[descent 09/10] pass=False L6_upper=-1.507e-02 finite_max_upper=5.219e-08
+[descent 10/10] pass=False L6_upper=-1.402e-02 finite_max_upper=5.574e-08
+
+========================================================================================================================
+FINAL RESULT
+========================================================================================================================
+{
+  "scientific_status": "EXACT_ROOT_STEPWISE_DESCENT_INCONCLUSIVE",
+  "formal_interval_arithmetic": true,
+  "formal_krawczyk_linear_algebra": true,
+  "floating_inverse_used_only_as_preconditioner": true,
+  "arb_precision_bits": 192,
+  "global_parameterization_sha256": "e8ad8a6fbcab626b726082b570f59df6854d4a28259177783e1f5e3274b1cb84",
+  "parameter_boxes_certified": 640,
+  "parameter_boxes_declared": 640,
+  "shared_endpoints_certified": 9,
+  "shared_endpoints_declared": 9,
+  "maximum_krawczyk_inclusion_ratio": 0.15044487704036874,
+  "maximum_right_inverse_defect_bound": 0.11654768401067606,
+  "minimum_midpoint_singular_value": 0.005236708349557217,
+  "all_parameter_boxes_pass": true,
+  "all_shared_endpoints_pass": true,
+  "endpoint_root_boxes_certified": 11,
+  "endpoint_root_boxes_declared": 11,
+  "all_endpoint_root_boxes_pass": true,
+  "descent_segments_certified": 2,
+  "descent_segments_declared": 10,
+  "L6_descent_segments_certified": 10,
+  "finite_error_descent_segments_certified": 2,
+  "all_stepwise_L6_and_finite_error_descent_pass": false,
+  "finite_error_window": [
+    0.035,
+    0.13
+  ],
+  "finite_error_bins_per_segment": 48,
+  "maximum_certified_L6_difference_upper": -0.014024530042661354,
+  "maximum_certified_finite_error_difference_upper": 5.57362356891995e-08,
+  "full_declared_chain": true,
+  "global_six_dimensional_fibre_claimed": false,
+  "holonomy_claimed": false,
+  "pointwise_curve_parameter_monotonicity_claimed": false,
+  "stepwise_exact_root_finite_error_descent_claimed": false,
+  "protocol_sha256": "d7dfc6f06cc5b0b84f0ad092ae95aa980a443fea844f4d13ad70bad82246719c",
+  "elapsed_seconds": 3863.2015323638916,
+  "scope": "validated connected local response-matched curve; exact-root L6 and finite-window descent are reported as separate fail-closed gates, and finite-window descent is not claimed unless every declared segment passes",
+  "certificate_sha256": "8b27aacf507f9a377d57d7496c5bca5352852285c71b92eda115ee8fb151c5c5"
+}
+
+Interpretation
+  INCONCLUSIVE: at least one curve, endpoint-root, L6, or finite-window descent gate failed. Do not claim the combined exact-root descent theorem.
