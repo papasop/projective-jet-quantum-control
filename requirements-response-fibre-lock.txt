@@ -1,0 +1,13 @@
+# Response-fibre v1.3.1 reference environment lock status
+#
+# Reference Python: 3.12.13
+# Exact NumPy and SciPy versions were not present in the supplied full_run.log
+# or report.json. Do not guess them here; recover them from the original
+# execution environment or the original certificate archive.
+#
+# Known pinned dependency from requirements-response-fibre.txt:
+python-flint==0.8.0
+#
+# Pending original-environment recovery:
+# numpy==<unknown>
+# scipy==<unknown>

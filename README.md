@@ -1,39 +1,33 @@
 # Projective-Jet Quantum Control
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/tests-pytest-green.svg)](https://docs.pytest.org/)
+[![LGR: Python 3.9+](https://img.shields.io/badge/LGR-Python%203.9%2B-blue.svg)](https://www.python.org/)
+[![Response-fibre: Python 3.10+](https://img.shields.io/badge/Response--fibre-Python%203.10%2B-blue.svg)](https://www.python.org/)
+[![Reference run: Python 3.12.13](https://img.shields.io/badge/Reference%20run-Python%203.12.13-lightgrey.svg)](https://www.python.org/)
+[![Response-fibre artifact integrity](https://github.com/papasop/projective-jet-quantum-control/actions/workflows/response-fibre-syntax.yml/badge.svg)](https://github.com/papasop/projective-jet-quantum-control/actions/workflows/response-fibre-syntax.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Reference implementation scaffold and deterministic audit suite for
-**projective-jet quantum control, symmetric-loss filtration, and
-response-fibre descent**.
-
-This repository contains two implementation layers:
-
-1. the earlier Landau-Ginzburg-Reynolds (LGR) reasoning-trajectory experiment
-   package; and
-2. the v1.3.1 quantum-control projective-jet and response-fibre audit.
+Reference implementation and audit archive for **projective-jet quantum
+control**, symmetric-loss filtration, and response-fibre descent.
 
 The repository package version is `0.1.0`. The response-fibre audit protocol
 version is `1.3.1`.
 
 ---
 
-## Overview
+## Projective-Jet Filtration
 
 Symmetric-loss filtration studies when matched projective response jets force
 successive even-order loss terms to become identical. In the quantum-control
-formulation, the core claim is that matching only low-order derivatives can be
-insufficient: geometric contractions of projective jet tensors can preserve
-fourth-order error splits unless the matched jet order is lifted to the correct
-degeneracy level.
+formulation, matching only low-order derivatives can be insufficient:
+geometric contractions of projective jet tensors can preserve fourth-order
+error splits unless the matched jet order is lifted to the correct degeneracy
+level.
 
-The intended framework has three layers:
+The projective-jet framework has three layers:
 
 1. **Projective Loss Filtration Theorem**  
    Matching projective jet order `r` determines the first possible
-   symmetrized loss split through
-   `e(r) = 2 * ceil((r + 2) / 2)`.
+   symmetrized loss split through `e(r) = 2 * ceil((r + 2) / 2)`.
 
 2. **Symmetric-Loss Degeneracy Level `k`**  
    Matching through projective order `r = 2k - 1` forces common symmetric loss
@@ -51,101 +45,13 @@ The intended framework has three layers:
 | `k=2` | `r=3` | `Z_1, Z_2, Z_3` | `L_2, L_4` | `L_6` | `~6` |
 | `k=3` | `r=5` | `Z_1, ..., Z_5` | `L_2, L_4, L_6` | `L_8` | `~8` |
 
-## Implementation Layers
+## v1.3.1 Certified Result
 
-The LGR layer includes a deterministic experiment package:
+The v1.3.1 audit implements the phase-invariant projective response,
+driven-qubit realization, parameter-dependent Krawczyk continuation, and
+exact-root sixth-order descent certification.
 
-- gzip-based complexity proxy `K(x)`
-- instance order parameters `phi(x)`, `lambda_K`, and `h(x)`
-- trajectory construction `phi(t)` from answer-step residuals
-- LGR functionals `F2`, `F4`, and finite-difference gradients `G1..Gn`
-- baseline and full LGR least-squares regression helpers
-- a CLI with deterministic mock runs and optional OpenAI-backed runs
-- unit tests that do not require network access
-
-The v1.3.1 response-fibre audit implements the phase-invariant projective
-response, driven-qubit realization, parameter-dependent Krawczyk continuation,
-and exact-root sixth-order descent certification.
-
-## Installation
-
-```bash
-git clone https://github.com/papasop/projective-jet-quantum-control.git
-cd projective-jet-quantum-control
-python -m pip install -e ".[dev]"
-```
-
-Optional OpenAI-backed experiments require:
-
-```bash
-python -m pip install -e ".[openai]"
-export OPENAI_API_KEY="..."
-```
-
-## Quick Start
-
-Run the deterministic mock experiment:
-
-```bash
-slf-experiment --provider mock --out outputs/mock.csv
-```
-
-The legacy command name is also kept for compatibility:
-
-```bash
-lgr-experiment --provider mock --out outputs/mock.csv
-```
-
-Use the core metrics directly:
-
-```python
-from lgr_experiment import build_phi_t, lgr_functionals, measure_phi_x
-
-problem = "If 3x + 5 = 20, what is x?"
-answer = "Step 1: Subtract 5 to get 3x = 15. Step 2: Divide by 3. Final answer: x = 5."
-
-stats = measure_phi_x(problem, answer)
-phi_t = build_phi_t(answer)
-lgr = lgr_functionals(phi_t, max_order=6)
-
-print(stats["phi_x"])
-print(lgr["F2"], lgr["G1"], lgr["G2"])
-```
-
-## OpenAI-Backed Runs
-
-```bash
-slf-experiment --provider openai --model gpt-4o-mini --out outputs/openai.csv
-```
-
-The CLI runs the bundled 30 reasoning tasks in both `FAST` and `CoT` modes,
-saves raw rows to CSV, and prints baseline/LGR regression summaries.
-
-## Reproducing Local Audits
-
-```bash
-pytest
-PYTHONPATH=src python -m lgr_experiment.cli --provider mock --out outputs/mock.csv
-```
-
-Expected local status for the current implementation:
-
-| Audit Target | Command | Status |
-| --- | --- | --- |
-| Core metric tests | `pytest` | Passing |
-| Mock 30-task experiment | `slf-experiment --provider mock` | Passing after editable install |
-| OpenAI run | `slf-experiment --provider openai` | Requires `OPENAI_API_KEY` |
-
-## Response-Fibre Audit v1.3.1
-
-This repository now includes the validated response-fibre exact-root descent
-audit package under `scripts/standalone`, `docs`, and `results`.
-
-The LGR package supports Python `>=3.9`. The response-fibre v1.3.1 audit
-requires Python `>=3.10` because the standalone script uses Python 3.10 type
-syntax. The recorded reference execution used Python `3.12.13`.
-
-At 192-bit Arb precision, the v1.3.1 run certifies:
+At 192-bit Arb precision, the recorded v1.3.1 run certifies:
 
 | Gate | Result |
 | --- | ---: |
@@ -156,14 +62,19 @@ At 192-bit Arb precision, the v1.3.1 run certifies:
 | Consecutive endpoint steps certified over the common finite-error window | 2/10 |
 
 The aggregate status remains
-`EXACT_ROOT_STEPWISE_DESCENT_INCONCLUSIVE` because the stronger finite-error
-window statement closes for only 2/10 endpoint steps. The endpoint-to-endpoint
-sixth-order descent gate passes for all ten declared steps.
+`EXACT_ROOT_STEPWISE_DESCENT_INCONCLUSIVE` because the stronger uniform
+finite-error descent statement over the declared common window closes for only
+2/10 endpoint steps. The connected-curve, shared-endpoint, endpoint-root, and
+stepwise `L_6` gates all pass.
 
-The archived files currently constitute a validated run record with a recorded
-certificate hash. They do not yet constitute a complete publicly archived proof
-certificate because `results/response_fibre_v1_3_1/certificate.json` was not
-supplied with the run log.
+## Run the Audit
+
+Clone the repository:
+
+```bash
+git clone https://github.com/papasop/projective-jet-quantum-control.git
+cd projective-jet-quantum-control
+```
 
 Install the response-fibre dependencies:
 
@@ -177,20 +88,64 @@ Run the full standalone audit:
 python scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py
 ```
 
-Compile the standalone audit without running the full calculation:
+The full run is long. For lightweight artifact checks:
 
 ```bash
 python -m py_compile scripts/standalone/response_fibre_exact_root_descent_v1_3_1.py
-```
-
-Verify the frozen artifact checksums:
-
-```bash
+python -m json.tool results/response_fibre_v1_3_1/report.json >/dev/null
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-See `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
+The response-fibre audit requires Python `>=3.10`. The recorded reference run
+used Python `3.12.13`.
+
+## Certificate and Hashes
+
+The public archive currently contains:
+
+- standalone source code;
+- complete textual execution log;
+- compact extracted report;
+- frozen artifact checksums;
+- the SHA-256 identifier of the certificate generated by the recorded run.
+
+The archived files constitute a validated run record with a recorded
+certificate hash. They do not yet constitute a complete publicly archived
+proof certificate because `results/response_fibre_v1_3_1/certificate.json` is
+not currently present.
+
+The recorded certificate hash is:
+
+```text
+8b27aacf507f9a377d57d7496c5bca5352852285c71b92eda115ee8fb151c5c5
+```
+
+If the original `certificate.json` is recovered, place it at
+`results/response_fibre_v1_3_1/certificate.json`, verify that its SHA-256 hash
+matches the value above, and add it to `SHA256SUMS.txt`. If the certificate is
+regenerated instead, publish it as a new certificate version with a new hash.
+
+The wide dependency file is `requirements-response-fibre.txt`. The companion
+`requirements-response-fibre-lock.txt` records the current lock status; exact
+NumPy and SciPy versions were not present in the supplied run log or compact
+report, so they are intentionally not guessed.
+
+## Paper Correspondence
+
+Use `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
 `results/response_fibre_v1_3_1/report.json` for the compact final report.
+The complete textual run record is stored at
+`results/response_fibre_v1_3_1/full_run.log`.
+
+Conservative citation wording:
+
+```text
+The standalone source, complete textual execution log, compact report, and
+frozen artifact checksums are publicly available at
+https://github.com/papasop/projective-jet-quantum-control. The SHA-256
+identifier of the certificate generated by the recorded execution is reported,
+although the original certificate JSON is not yet publicly archived.
+```
 
 ## Completed in v1.3.1
 
@@ -205,14 +160,64 @@ See `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
 
 ## Roadmap
 
-- Add symbolic symmetric-loss filtration checks for `k=1..3`.
 - Archive the original
   `results/response_fibre_v1_3_1/certificate.json` matching the recorded
   `certificate_sha256`.
+- Record exact NumPy and SciPy versions from the original execution
+  environment or original certificate.
 - Extend the finite-error descent audit beyond the current 2/10 certified
   endpoint steps.
+- Add symbolic symmetric-loss filtration checks for `k=1..3`.
 - Add response-fibre tangent projection experiments beyond the certified
   endpoint chain.
+
+## Legacy LGR Experiment
+
+The repository also contains an earlier Landau-Ginzburg-Reynolds (LGR)
+reasoning-trajectory experiment package. It is retained for provenance and is
+not a dependency of the v1.3.1 projective-jet quantum-control audit.
+
+The LGR layer supports Python `>=3.9` and includes:
+
+- gzip-based complexity proxy `K(x)`;
+- instance order parameters `phi(x)`, `lambda_K`, and `h(x)`;
+- trajectory construction `phi(t)` from answer-step residuals;
+- LGR functionals `F2`, `F4`, and finite-difference gradients `G1..Gn`;
+- baseline and full LGR least-squares regression helpers;
+- deterministic mock runs and optional OpenAI-backed runs.
+
+Install the LGR package in editable mode:
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+Run the deterministic mock experiment:
+
+```bash
+slf-experiment --provider mock --out outputs/mock.csv
+```
+
+The legacy command name is also kept for compatibility:
+
+```bash
+lgr-experiment --provider mock --out outputs/mock.csv
+```
+
+Optional OpenAI-backed experiments require:
+
+```bash
+python -m pip install -e ".[openai]"
+export OPENAI_API_KEY="..."
+slf-experiment --provider openai --model gpt-4o-mini --out outputs/openai.csv
+```
+
+Run local LGR tests:
+
+```bash
+pytest
+PYTHONPATH=src python -m lgr_experiment.cli --provider mock --out outputs/mock.csv
+```
 
 ## Citation
 

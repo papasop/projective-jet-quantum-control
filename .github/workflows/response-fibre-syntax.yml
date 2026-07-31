@@ -1,4 +1,4 @@
-name: response-fibre validation
+name: response-fibre artifact integrity
 
 on:
   push:
