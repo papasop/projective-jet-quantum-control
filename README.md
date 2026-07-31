@@ -1,12 +1,12 @@
-# Symmetric-Loss Filtration
+# Projective-Jet Quantum Control
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/tests-pytest-green.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Reference implementation scaffold and deterministic audit suite for
-**symmetric-loss filtration, projective-jet degeneracy, and response-fibre
-descent**.
+**projective-jet quantum control, symmetric-loss filtration, and
+response-fibre descent**.
 
 This repository contains two implementation layers:
 
@@ -70,8 +70,8 @@ and exact-root sixth-order descent certification.
 ## Installation
 
 ```bash
-git clone https://github.com/papasop/symmetric-loss-filtration.git
-cd symmetric-loss-filtration
+git clone https://github.com/papasop/projective-jet-quantum-control.git
+cd projective-jet-quantum-control
 python -m pip install -e ".[dev]"
 ```
 
@@ -217,11 +217,12 @@ See `docs/response_fibre_v1_3_1.md` for theorem-ready wording and
 ## Citation
 
 If you use this software or theoretical framework in research, cite the project
-paper or preprint associated with symmetric-loss filtration once available.
+paper or preprint associated with projective-jet quantum control once
+available.
 
 ```bibtex
-@misc{li2026symmetriclossfiltration,
-  title={Symmetric-Loss Filtration and Projective-Jet Degeneracy},
+@misc{li2026projectivejetquantumcontrol,
+  title={Projective-Jet Quantum Control and Symmetric-Loss Filtration},
   author={Li, Y. Y. N.},
   year={2026},
   note={Software implementation and deterministic audit suite}

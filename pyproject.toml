@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "symmetric-loss-filtration"
+name = "projective-jet-quantum-control"
 version = "0.1.0"
-description = "Symmetric-loss filtration and LGR reasoning trace experiments"
+description = "Projective-jet quantum control and response-fibre audit experiments"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
